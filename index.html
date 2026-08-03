@@ -8,39 +8,25 @@
 <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
-
 :root{
   --brand:#1391c9;
-  --gmail-bg:#F6F8FC;
-  --gmail-chrome:#FFFFFF;
-  --gmail-border:#E0E0E0;
-  --gmail-blue:#1A73E8;
-  --gmail-text:#202124;
-  --gmail-meta:#5F6368;
-  --gmail-hover:#F1F3F4;
-  --white:#FFFFFF;
+  --gmail-bg:#F6F8FC; --gmail-chrome:#FFFFFF; --gmail-border:#E0E0E0;
+  --gmail-blue:#1A73E8; --gmail-text:#202124; --gmail-meta:#5F6368; --gmail-hover:#F1F3F4; --white:#FFFFFF;
 }
-
 body{font-family:'Roboto',sans-serif;background:var(--gmail-bg);color:var(--gmail-text);font-size:14px;line-height:1.6;padding:32px 20px;}
-
 .page-header{text-align:center;margin-bottom:40px;}
 .page-header h1{font-family:'Outfit',sans-serif;font-size:28px;font-weight:600;color:#202124;margin-bottom:6px;}
 .page-header p{font-size:14px;color:var(--gmail-meta);}
-
 .sequence{display:flex;flex-direction:column;gap:32px;max-width:780px;margin:0 auto;}
-
 .email-card{background:var(--gmail-chrome);border-radius:8px;overflow:hidden;box-shadow:0 1px 3px rgba(0,0,0,.12),0 1px 2px rgba(0,0,0,.08);}
 .gmail-chrome{background:var(--gmail-chrome);border-bottom:1px solid var(--gmail-border);}
 .gmail-topbar{background:#FFFFFF;display:flex;align-items:center;padding:8px 16px;gap:10px;border-bottom:1px solid var(--gmail-border);}
 .gmail-logo-m{width:30px;height:23px;}
 .gmail-topbar-actions{display:flex;align-items:center;gap:16px;margin-left:auto;}
 .gmail-icon{width:20px;height:20px;border-radius:50%;background:var(--gmail-hover);display:flex;align-items:center;justify-content:center;font-size:11px;color:var(--gmail-meta);}
-
 .day-badge{display:inline-flex;align-items:center;background:#E8F0FE;color:var(--gmail-blue);font-size:11px;font-weight:500;letter-spacing:.02em;padding:3px 11px;border-radius:12px;margin:10px 16px 0;}
-
 .email-thread-header{padding:12px 16px 10px;}
 .email-subject-line{font-size:20px;font-weight:400;color:var(--gmail-text);}
-
 .sender-row{display:flex;align-items:center;padding:10px 16px;gap:12px;border-bottom:1px solid var(--gmail-border);}
 .sender-avatar{width:36px;height:36px;border-radius:50%;background:var(--brand);display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:500;color:#fff;flex-shrink:0;}
 .sender-info{flex:1;min-width:0;}
@@ -50,35 +36,28 @@ body{font-family:'Roboto',sans-serif;background:var(--gmail-bg);color:var(--gmai
 .sender-actions{display:flex;gap:8px;}
 .sender-action-icon{width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;color:var(--gmail-meta);font-size:14px;}
 .sender-action-icon:hover{background:var(--gmail-hover);}
-
 .email-body{padding:20px 24px 28px 68px;}
 .email-p{font-size:14px;color:#3C4043;margin-bottom:12px;font-weight:400;line-height:1.75;}
 .email-p.bold-line{font-weight:500;color:var(--gmail-text);}
 .email-p strong{font-weight:500;color:var(--gmail-text);}
 .email-p em{font-style:italic;color:var(--gmail-meta);}
-
-.callout-list{display:flex;flex-direction:column;gap:6px;margin:12px 0;}
-.callout-item{font-size:14px;color:#3C4043;font-style:italic;padding:9px 14px;background:#EFF7FB;border-left:3px solid var(--brand);border-radius:0 4px 4px 0;}
-
+.email-quote{font-size:16px;font-style:italic;color:var(--gmail-text);border-left:3px solid var(--brand);padding:6px 0 6px 16px;margin-bottom:16px;line-height:1.5;}
 .steps-box{background:#F4FAFD;border:1px solid #DCEEF6;border-radius:6px;padding:14px 18px;margin:12px 0;}
 .step-item{font-size:14px;color:#3C4043;margin-bottom:8px;}
 .step-item:last-child{margin-bottom:0;}
 .step-item b{color:#0F6F9C;font-weight:500;}
-
+.email-img-ph{width:200px;max-width:60%;aspect-ratio:3/4;border:1.5px dashed #cbd5df;border-radius:8px;background:#f6f9fc;color:#8a929c;font-style:italic;font-size:13px;padding:18px;text-align:center;margin:14px 0;display:flex;align-items:center;justify-content:center;}
 .email-cta{display:inline-block;background:var(--gmail-blue);color:#fff;text-decoration:none;padding:10px 24px;border-radius:4px;font-size:14px;font-weight:500;margin:14px 0 4px;letter-spacing:.01em;}
 .email-cta:hover{background:#1557B0;}
-
 .email-divider{border:none;border-top:1px solid var(--gmail-border);margin:20px 0;}
 .email-sig{margin-top:16px;}
 .sig-closing{font-size:14px;color:#3C4043;font-style:italic;margin-bottom:6px;}
 .sig-name{font-size:14px;font-weight:500;color:var(--gmail-text);}
 .sig-title{font-size:13px;color:var(--gmail-meta);}
 .email-ps{margin-top:18px;padding-top:14px;border-top:1px solid var(--gmail-border);font-size:14px;color:#3C4043;line-height:1.75;}
-
 .reply-bar{display:flex;gap:8px;padding:12px 16px;border-top:1px solid var(--gmail-border);background:#FAFAFA;}
 .reply-btn{display:flex;align-items:center;gap:6px;padding:7px 16px;border:1px solid var(--gmail-border);border-radius:4px;font-size:13px;font-weight:500;color:var(--gmail-meta);background:var(--white);cursor:pointer;}
 .reply-btn:hover{background:var(--gmail-hover);}
-
 .subject-options{background:#F8F9FA;border-top:1px solid var(--gmail-border);padding:16px 24px;}
 .subject-options-label{font-size:11px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--gmail-meta);margin-bottom:10px;}
 .subject-list{display:flex;flex-direction:column;gap:6px;}
@@ -87,12 +66,7 @@ body{font-family:'Roboto',sans-serif;background:var(--gmail-bg);color:var(--gmai
 .subject-option::before{content:'';width:5px;height:5px;border-radius:50%;background:var(--gmail-border);flex-shrink:0;}
 .subject-option.recommended::before{background:var(--brand);}
 .recommended-tag{font-size:11px;font-weight:500;color:#0F6F9C;margin-left:auto;letter-spacing:.02em;}
-
-@media(max-width:600px){
-  .email-body{padding:16px;}
-  .sender-row{padding:10px 12px;}
-  .day-badge{margin:8px 12px 0;}
-}
+@media(max-width:600px){.email-body{padding:16px;}.sender-row{padding:10px 12px;}.day-badge{margin:8px 12px 0;}}
 </style>
 </head>
 <body>
@@ -117,12 +91,8 @@ body{font-family:'Roboto',sans-serif;background:var(--gmail-bg);color:var(--gmai
         <span style="font-size:13px;color:#5F6368;">Gmail</span>
         <div class="gmail-topbar-actions"><div class="gmail-icon">⋯</div></div>
       </div>
-
       <div class="day-badge">Send Upon Purchase &nbsp;·&nbsp; Order Confirmation</div>
-      <div class="email-thread-header">
-        <div class="email-subject-line">Your H2Tab Order Is Confirmed</div>
-      </div>
-
+      <div class="email-thread-header"><div class="email-subject-line">Your H2Tab Order Is Confirmed</div></div>
       <div class="sender-row">
         <div class="sender-avatar">H2</div>
         <div class="sender-info">
@@ -133,22 +103,11 @@ body{font-family:'Roboto',sans-serif;background:var(--gmail-bg);color:var(--gmai
         <div class="sender-actions"><div class="sender-action-icon">↩</div><div class="sender-action-icon">⋯</div></div>
       </div>
     </div>
-
     <div class="email-body">
       <p class="email-p">Hey [Name],</p>
       <p class="email-p">Your order is confirmed.</p>
-      <p class="email-p">We're now processing it for shipping. Expect your Hydrogen Tablets in 5 to 7 days.</p>
-      <p class="email-p">Our tablets work deep within your body so you can keep living on your own terms.</p>
-
-      <div class="callout-list">
-        <div class="callout-item">You'll soon feel that standing up takes less energy.</div>
-        <div class="callout-item">That walk to the mailbox won't wind you the way it used to.</div>
-        <div class="callout-item">And you still have energy to burn by evening.</div>
-      </div>
-
-      <p class="email-p bold-line">Drink 1 tablet dissolved in water every morning to feel the benefits sooner.</p>
-      <p class="email-p">Improvements don't happen overnight, but you'll notice the difference in your days once they take effect.</p>
-
+      <p class="email-p">You can expect to receive your Hydrogen Tablets in 5 to 7 days.</p>
+      <div class="email-img-ph">Image of order confirmation</div>
       <hr class="email-divider">
       <div class="email-sig">
         <p class="sig-closing">To Living On Your Own Terms,</p>
@@ -156,12 +115,7 @@ body{font-family:'Roboto',sans-serif;background:var(--gmail-bg);color:var(--gmai
         <p class="sig-title">Founder of H2Tab</p>
       </div>
     </div>
-
-    <div class="reply-bar">
-      <button class="reply-btn">↩ Reply</button>
-      <button class="reply-btn">↪ Forward</button>
-    </div>
-
+    <div class="reply-bar"><button class="reply-btn">↩ Reply</button><button class="reply-btn">↪ Forward</button></div>
     <div class="subject-options">
       <div class="subject-options-label">Subject Line Variations</div>
       <div class="subject-list">
@@ -185,12 +139,8 @@ body{font-family:'Roboto',sans-serif;background:var(--gmail-bg);color:var(--gmai
         <span style="font-size:13px;color:#5F6368;">Gmail</span>
         <div class="gmail-topbar-actions"><div class="gmail-icon">⋯</div></div>
       </div>
-
       <div class="day-badge">Send Upon Delivery Confirmation &nbsp;·&nbsp; Instructions</div>
-      <div class="email-thread-header">
-        <div class="email-subject-line">3 Simple Steps To Make Your Hydrogen Tablet Work</div>
-      </div>
-
+      <div class="email-thread-header"><div class="email-subject-line">4 Simple Steps To Never Miss A Day</div></div>
       <div class="sender-row">
         <div class="sender-avatar">H2</div>
         <div class="sender-info">
@@ -201,24 +151,21 @@ body{font-family:'Roboto',sans-serif;background:var(--gmail-bg);color:var(--gmai
         <div class="sender-actions"><div class="sender-action-icon">↩</div><div class="sender-action-icon">⋯</div></div>
       </div>
     </div>
-
     <div class="email-body">
       <p class="email-p">Hey [Name],</p>
-      <p class="email-p">The common reason why hydrogen tablets stop working?</p>
-      <p class="email-p bold-line">Skipping days.</p>
-      <p class="email-p">We made H2Tab so simple you never have to skip a day.</p>
-      <p class="email-p">All it takes are 4 simple steps:</p>
-
+      <p class="email-p">I've heard a lot of people say that hydrogen tablets didn't work for them.</p>
+      <p class="email-p">They all had 1 thing in common…</p>
+      <p class="email-p bold-line">They all skipped for DAYS.</p>
+      <p class="email-p">We don't want the same thing to happen to you.</p>
+      <p class="email-p">That's why we made a simple 4-step process so you can drink your daily hydrogen.</p>
       <div class="steps-box">
         <div class="step-item"><b>Step 1:</b> Prepare 12oz to 16oz of water</div>
         <div class="step-item"><b>Step 2:</b> Drop the tablet in the water</div>
         <div class="step-item"><b>Step 3:</b> Wait for it to dissolve</div>
         <div class="step-item"><b>Step 4:</b> Drink your hydrogen water</div>
       </div>
-
-      <p class="email-p">Do this every morning and you'll soon find that walking to your porch feels less tiring.</p>
-      <p class="email-p bold-line">When moving gets easier, that's when you know it's working.</p>
-
+      <p class="email-p">Isn't that easy?</p>
+      <p class="email-p">If you do these 4 steps before eating breakfast, you never have to worry about skipping a dose.</p>
       <hr class="email-divider">
       <div class="email-sig">
         <p class="sig-closing">To Living On Your Own Terms,</p>
@@ -226,17 +173,12 @@ body{font-family:'Roboto',sans-serif;background:var(--gmail-bg);color:var(--gmai
         <p class="sig-title">Founder of H2Tab</p>
       </div>
     </div>
-
-    <div class="reply-bar">
-      <button class="reply-btn">↩ Reply</button>
-      <button class="reply-btn">↪ Forward</button>
-    </div>
-
+    <div class="reply-bar"><button class="reply-btn">↩ Reply</button><button class="reply-btn">↪ Forward</button></div>
     <div class="subject-options">
       <div class="subject-options-label">Subject Line Variations</div>
       <div class="subject-list">
-        <div class="subject-option recommended">3 Simple Steps To Make Your Hydrogen Tablet Work <span class="recommended-tag">RECOMMENDED</span></div>
-        <div class="subject-option">The #1 reason hydrogen tablets stop working</div>
+        <div class="subject-option recommended">4 simple steps to never miss a day <span class="recommended-tag">RECOMMENDED</span></div>
+        <div class="subject-option">#1 reason why hydrogen tablets don't work</div>
         <div class="subject-option">[Name], are you worried hydrogen tablets won't work?</div>
       </div>
     </div>
@@ -255,12 +197,8 @@ body{font-family:'Roboto',sans-serif;background:var(--gmail-bg);color:var(--gmai
         <span style="font-size:13px;color:#5F6368;">Gmail</span>
         <div class="gmail-topbar-actions"><div class="gmail-icon">⋯</div></div>
       </div>
-
       <div class="day-badge">Send 3 Days After Delivery Confirmation &nbsp;·&nbsp; Testimonial + Soft Sell</div>
-      <div class="email-thread-header">
-        <div class="email-subject-line">Bob Got To Play With The Grandkids</div>
-      </div>
-
+      <div class="email-thread-header"><div class="email-subject-line">Bob Got To Play With The Grandkids</div></div>
       <div class="sender-row">
         <div class="sender-avatar">H2</div>
         <div class="sender-info">
@@ -271,46 +209,41 @@ body{font-family:'Roboto',sans-serif;background:var(--gmail-bg);color:var(--gmai
         <div class="sender-actions"><div class="sender-action-icon">↩</div><div class="sender-action-icon">⋯</div></div>
       </div>
     </div>
-
     <div class="email-body">
-      <p class="email-p">Hey [Name],</p>
-      <p class="email-p">This is Bob, he tried all sorts of supplements but none of it worked for him.</p>
-      <p class="email-p">So naturally, he was skeptical about hydrogen water.</p>
-      <p class="email-p">But he knew nothing would change if he didn't do anything.</p>
-      <p class="email-p">So he gave our hydrogen tablets a chance. One tablet in his glass of water, every morning with breakfast.</p>
-
-      <div class="callout-list">
-        <div class="callout-item">A few weeks passed, he noticed moving didn't take as much effort.</div>
-        <div class="callout-item">He could keep up with the grandkids a little easier this time.</div>
-        <div class="callout-item">Life's been more fun for him because he can now move the way he wants to again.</div>
-      </div>
-
-      <p class="email-p">And that's our goal for you too.</p>
-
+      <p class="email-quote">"But grandpa, we want to keep playing with you."</p>
+      <p class="email-p">Meet Bob, he hasn't seen his grandkids in weeks.</p>
+      <p class="email-p">But he's already exhausted after playing with them for a few minutes.</p>
+      <p class="email-p">He's tried all sorts of supplements but nothing worked the way he wanted them to…</p>
+      <p class="email-p">So when he heard about hydrogen water, he was naturally doubtful.</p>
+      <p class="email-p">But he figured nothing changes if you don't do anything.</p>
+      <p class="email-p">So he dropped a hydrogen tablet in his glass of water every morning.</p>
+      <p class="email-p">A few weeks passed, he noticed standing up took less effort.</p>
+      <p class="email-p">He lasted longer playing with his grandkids on their last visit.</p>
+      <p class="email-p">And life has been more fun for him ever since his stiff joints weren't holding him back as much.</p>
+      <p class="email-p">Bob knew his body needed help, but he didn't know how until he learned about hydrogen water.</p>
+      <!-- OPEN ITEM: "anti-inflammatory" is a claim-category risk for supplement copy (FTC substantiation). This line newly introduces it into the post-purchase set. Safer: "Hydrogen gave his body the antioxidant support it needed." Kept verbatim per source copy. -->
+      <p class="email-p">Hydrogen gave his body the anti-inflammatory and anti-oxidation it needed.</p>
+      <p class="email-p">So when his body can finally support itself again, his body helped him back.</p>
+      <p class="email-p">When you give your body the hydrogen it needs, your body will support you too.</p>
+      <p class="email-p">Just like Bob, you can drop a hydrogen tablet in a glass of water in the morning then drink immediately once it's dissolved.</p>
       <hr class="email-divider">
       <div class="email-sig">
         <p class="sig-closing">To Living On Your Own Terms,</p>
         <p class="sig-name">[Founder Name]</p>
         <p class="sig-title">Founder of H2Tab</p>
       </div>
-
       <div class="email-ps">
-        P.S. Our multivitamins pair great with hydrogen water, and it's 20% off right now.<br>
-        <a href="#" class="email-cta">Click Here to See the Offer</a>
+        P.S. We have a 20% promo with multivitamins that's perfect to pair with your hydrogen tablets.<br>
+        <a href="#" class="email-cta">Click Here to Learn More</a>
       </div>
     </div>
-
-    <div class="reply-bar">
-      <button class="reply-btn">↩ Reply</button>
-      <button class="reply-btn">↪ Forward</button>
-    </div>
-
+    <div class="reply-bar"><button class="reply-btn">↩ Reply</button><button class="reply-btn">↪ Forward</button></div>
     <div class="subject-options">
       <div class="subject-options-label">Subject Line Variations</div>
       <div class="subject-list">
         <div class="subject-option recommended">Bob Got To Play With The Grandkids <span class="recommended-tag">RECOMMENDED</span></div>
-        <div class="subject-option">When a skeptic tried hydrogen tablets</div>
-        <div class="subject-option">[Name], hear from our skeptic</div>
+        <div class="subject-option">When a Skeptic Tried Hydrogen Tablets</div>
+        <div class="subject-option">[Name], Hear From Our Skeptic</div>
       </div>
     </div>
   </div>
