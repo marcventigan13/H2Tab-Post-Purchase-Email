@@ -36,14 +36,14 @@ body{font-family:'Roboto',sans-serif;background:var(--gmail-bg);color:var(--gmai
 .sender-actions{display:flex;gap:8px;}
 .sender-action-icon{width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;color:var(--gmail-meta);font-size:14px;}
 .sender-action-icon:hover{background:var(--gmail-hover);}
-.email-body{padding:20px 24px 28px 68px;}
-.email-p{font-size:14px;color:#3C4043;margin-bottom:12px;font-weight:400;line-height:1.75;}
+.email-body{padding:20px 24px 28px 68px;font-family:Arial,Helvetica,sans-serif;}
+.email-p{font-size:13pt;color:#3C4043;margin-bottom:12px;font-weight:400;line-height:1.7;}
 .email-p.bold-line{font-weight:500;color:var(--gmail-text);}
 .email-p strong{font-weight:500;color:var(--gmail-text);}
 .email-p em{font-style:italic;color:var(--gmail-meta);}
-.email-quote{font-size:16px;font-style:italic;color:var(--gmail-text);border-left:3px solid var(--brand);padding:6px 0 6px 16px;margin-bottom:16px;line-height:1.5;}
+.email-quote{font-size:15pt;font-style:italic;color:var(--gmail-text);border-left:3px solid var(--brand);padding:6px 0 6px 16px;margin-bottom:16px;line-height:1.5;}
 .steps-box{background:#F4FAFD;border:1px solid #DCEEF6;border-radius:6px;padding:14px 18px;margin:12px 0;}
-.step-item{font-size:14px;color:#3C4043;margin-bottom:8px;}
+.step-item{font-size:13pt;color:#3C4043;margin-bottom:8px;}
 .step-item:last-child{margin-bottom:0;}
 .step-item b{color:#0F6F9C;font-weight:500;}
 .email-img-ph{width:200px;max-width:60%;aspect-ratio:3/4;border:1.5px dashed #cbd5df;border-radius:8px;background:#f6f9fc;color:#8a929c;font-style:italic;font-size:13px;padding:18px;text-align:center;margin:14px 0;display:flex;align-items:center;justify-content:center;}
@@ -51,10 +51,10 @@ body{font-family:'Roboto',sans-serif;background:var(--gmail-bg);color:var(--gmai
 .email-cta:hover{background:#1557B0;}
 .email-divider{border:none;border-top:1px solid var(--gmail-border);margin:20px 0;}
 .email-sig{margin-top:16px;}
-.sig-closing{font-size:14px;color:#3C4043;font-style:italic;margin-bottom:6px;}
-.sig-name{font-size:14px;font-weight:500;color:var(--gmail-text);}
-.sig-title{font-size:13px;color:var(--gmail-meta);}
-.email-ps{margin-top:18px;padding-top:14px;border-top:1px solid var(--gmail-border);font-size:14px;color:#3C4043;line-height:1.75;}
+.sig-closing{font-size:13pt;color:#3C4043;font-style:italic;margin-bottom:6px;}
+.sig-name{font-size:13pt;font-weight:500;color:var(--gmail-text);}
+.sig-title{font-size:12pt;color:var(--gmail-meta);}
+.email-ps{margin-top:18px;padding-top:14px;border-top:1px solid var(--gmail-border);font-size:13pt;color:#3C4043;line-height:1.7;}
 .reply-bar{display:flex;gap:8px;padding:12px 16px;border-top:1px solid var(--gmail-border);background:#FAFAFA;}
 .reply-btn{display:flex;align-items:center;gap:6px;padding:7px 16px;border:1px solid var(--gmail-border);border-radius:4px;font-size:13px;font-weight:500;color:var(--gmail-meta);background:var(--white);cursor:pointer;}
 .reply-btn:hover{background:var(--gmail-hover);}
@@ -67,6 +67,7 @@ body{font-family:'Roboto',sans-serif;background:var(--gmail-bg);color:var(--gmai
 .subject-option.recommended::before{background:var(--brand);}
 .recommended-tag{font-size:11px;font-weight:500;color:#0F6F9C;margin-left:auto;letter-spacing:.02em;}
 @media(max-width:600px){.email-body{padding:16px;}.sender-row{padding:10px 12px;}.day-badge{margin:8px 12px 0;}}
+.merge{background:#FFF176;padding:0 3px;border-radius:2px;}
 </style>
 </head>
 <body>
@@ -97,17 +98,17 @@ body{font-family:'Roboto',sans-serif;background:var(--gmail-bg);color:var(--gmai
         <div class="sender-avatar">H2</div>
         <div class="sender-info">
           <div class="sender-name">H2Tab <span style="font-weight:400;color:#5F6368;">&lt;hello@h2tab.com&gt;</span></div>
-          <div class="sender-email">to [Name]</div>
+          <div class="sender-email">to <span class="merge">[Name]</span></div>
         </div>
         <div class="sender-meta">9:02 AM</div>
         <div class="sender-actions"><div class="sender-action-icon">↩</div><div class="sender-action-icon">⋯</div></div>
       </div>
     </div>
     <div class="email-body">
-      <p class="email-p">Hey [Name],</p>
+      <p class="email-p">Hey <span class="merge">[Name]</span>,</p>
       <p class="email-p">Your order is confirmed.</p>
       <p class="email-p">You can expect to receive your Hydrogen Tablets in 5 to 7 days.</p>
-      <div class="email-img-ph">Image of order confirmation</div>
+      <div class="email-img-ph"><span class="merge">Image of order confirmation</span></div>
       <hr class="email-divider">
       <div class="email-sig">
         <p class="sig-closing">To Living On Your Own Terms,</p>
@@ -120,8 +121,8 @@ body{font-family:'Roboto',sans-serif;background:var(--gmail-bg);color:var(--gmai
       <div class="subject-options-label">Subject Line Variations</div>
       <div class="subject-list">
         <div class="subject-option recommended">Your H2Tab Order Is Confirmed <span class="recommended-tag">RECOMMENDED</span></div>
-        <div class="subject-option">[Name], here's what to expect with H2Tabs</div>
-        <div class="subject-option">[Name], we're preparing your H2Tabs</div>
+        <div class="subject-option"><span class="merge">[Name]</span>, here's what to expect with H2Tabs</div>
+        <div class="subject-option"><span class="merge">[Name]</span>, we're preparing your H2Tabs</div>
       </div>
     </div>
   </div>
@@ -145,14 +146,14 @@ body{font-family:'Roboto',sans-serif;background:var(--gmail-bg);color:var(--gmai
         <div class="sender-avatar">H2</div>
         <div class="sender-info">
           <div class="sender-name">H2Tab <span style="font-weight:400;color:#5F6368;">&lt;hello@h2tab.com&gt;</span></div>
-          <div class="sender-email">to [Name]</div>
+          <div class="sender-email">to <span class="merge">[Name]</span></div>
         </div>
         <div class="sender-meta">2:14 PM</div>
         <div class="sender-actions"><div class="sender-action-icon">↩</div><div class="sender-action-icon">⋯</div></div>
       </div>
     </div>
     <div class="email-body">
-      <p class="email-p">Hey [Name],</p>
+      <p class="email-p">Hey <span class="merge">[Name]</span>,</p>
       <p class="email-p">I've heard a lot of people say that hydrogen tablets didn't work for them.</p>
       <p class="email-p">They all had 1 thing in common…</p>
       <p class="email-p bold-line">They all skipped for DAYS.</p>
@@ -179,7 +180,7 @@ body{font-family:'Roboto',sans-serif;background:var(--gmail-bg);color:var(--gmai
       <div class="subject-list">
         <div class="subject-option recommended">4 simple steps to never miss a day <span class="recommended-tag">RECOMMENDED</span></div>
         <div class="subject-option">#1 reason why hydrogen tablets don't work</div>
-        <div class="subject-option">[Name], are you worried hydrogen tablets won't work?</div>
+        <div class="subject-option"><span class="merge">[Name]</span>, are you worried hydrogen tablets won't work?</div>
       </div>
     </div>
   </div>
@@ -203,7 +204,7 @@ body{font-family:'Roboto',sans-serif;background:var(--gmail-bg);color:var(--gmai
         <div class="sender-avatar">H2</div>
         <div class="sender-info">
           <div class="sender-name">H2Tab <span style="font-weight:400;color:#5F6368;">&lt;hello@h2tab.com&gt;</span></div>
-          <div class="sender-email">to [Name]</div>
+          <div class="sender-email">to <span class="merge">[Name]</span></div>
         </div>
         <div class="sender-meta">8:30 AM</div>
         <div class="sender-actions"><div class="sender-action-icon">↩</div><div class="sender-action-icon">⋯</div></div>
@@ -243,7 +244,7 @@ body{font-family:'Roboto',sans-serif;background:var(--gmail-bg);color:var(--gmai
       <div class="subject-list">
         <div class="subject-option recommended">Bob Got To Play With The Grandkids <span class="recommended-tag">RECOMMENDED</span></div>
         <div class="subject-option">When a Skeptic Tried Hydrogen Tablets</div>
-        <div class="subject-option">[Name], Hear From Our Skeptic</div>
+        <div class="subject-option"><span class="merge">[Name]</span>, Hear From Our Skeptic</div>
       </div>
     </div>
   </div>
